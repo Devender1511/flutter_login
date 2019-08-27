@@ -38,12 +38,16 @@ Widget _bodyWidget(){
     padding: const EdgeInsets.all(9.0),
     child: new Center(
       child: new Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           new Text(mytext),
           new RaisedButton(
-            child: new Text("Login "),
+
+            child: new Text("Login ",style: new TextStyle(color: Colors.deepPurple,
+                fontStyle: FontStyle.italic),),
             onPressed: _changeText,
-          )
+            color: Colors.teal,
+          ),
         ],
 
       ),
