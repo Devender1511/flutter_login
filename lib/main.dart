@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: "First Application ",  //title
       home: new Homepage(),
+      theme: new ThemeData.dark(),
     );
   }
 }
@@ -41,13 +42,13 @@ Widget _bodyWidget(){
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
           new Text(mytext),
-          new RaisedButton(
-
-            child: new Text("Login ",style: new TextStyle(color: Colors.deepPurple,
-                fontStyle: FontStyle.italic),),
-            onPressed: _changeText,
-            color: Colors.teal,
-          ),
+//          new RaisedButton(
+//
+//            child: new Text("Login ",style: new TextStyle(color: Colors.deepPurple,
+//                fontStyle: FontStyle.italic),),
+//            onPressed: _changeText,
+//            color: Colors.teal,
+//          ),
         ],
 
       ),
@@ -62,6 +63,10 @@ Widget _bodyWidget(){
         title: new Text("Login"),
       ),
       body: _bodyWidget(),
+      floatingActionButton: new FloatingActionButton(
+        child: new Icon(Icons.add),
+        onPressed: _changeText,
+      ),
     );
   }
 
